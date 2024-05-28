@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>blog</h1>
+<article class="article">
+  <div class="article__header">
+    <h1>{{ page.title }}</h1>
+    {{ page.date }}
+    {% if page.updated %}
+      (<i>Updated: {{ page.updated }}</i>)
+    {% endif %}
+    {% if page.taxonomies.tags %}
+      <ul class="article__tags">
+      {% for tag in page.taxonomies.tags %}
+        {% set url = get_taxonomy_url(kind="tags", name=tag) %}
+        <li class="article__tag"><a class="article__tag-link" href="{{ url }}">{{ tag }}</a></li>
+      {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+  {{ page.content | safe }}
+</article>
+{% endblock content %}

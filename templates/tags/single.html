@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block header %}
+<link
+    rel="alternate" type="application/atom+xml" href="{{ term.path ~ 'atom.xml' }}"
+    title="{{ 'jamesbtan blog: ' ~ term.name ~ ' tag' }}"></link>
+{% endblock header %}
+{% block content %}
+{% if term.name == "project" %}
+<h1>projects</h1>
+<ul class="project-list">
+{% for page in term.pages %}
+  <li class="project-list__card">
+    <article>
+      <h1 class="project-list__title">{{ page.title }}</h1>
+      {% set e = page.extra %}
+      {% if e.desc %}
+        <p>{{ e.desc }}</p>
+      {% endif %}
+      <div class="project-list__buttons">
+        <a class="project-list__button project-list__button--tag" href="{{ page.permalink | safe }}">Blog</a>
+        {% if e.demo %}
+          <a class="project-list__button project-list__button--demo" href="{{ e.demo }}">Demo</a>
+        {% else %}
+          <div class="project-list__button project-list__button--demo project-list__button--inactive">Demo</div>
+        {% endif %}
+        {% if e.github %}
+          <a class="project-list__button project-list__button--github" href="{{ e.github }}">Source</a>
+        {% else %}
+        <div class="project-list__button project-list__button--github project-list__button--inactive">Source</div>
+        {% endif %}
+      </div>
+    </article>
+  </li>
+{% endfor %}
+</ul>
+{% else %}
+<h1>
+  {{ taxonomy.name }} |
+  {% set cum_path = "" %}
+  {% for subtag in term.name | split(pat="/") %}
+    {% if loop.first %}
+      {% set_global cum_path = subtag %}
+    {% else %}
+      /
+      {% set_global cum_path = cum_path ~ "/" ~ subtag %}
+    {% endif %}
+    {% set tag = get_taxonomy_term(kind='tags', term=cum_path, required=false) %}
+    {% if tag and not loop.last %}
+      <a href="{{ tag.permalink | safe }}">{{ subtag }}</a>
+    {% else %}
+      {{ subtag }}
+    {% endif %}
+  {% endfor %}
+</h1>
+<ul>
+  {% for page in term.pages %}
+    <li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
+  {% endfor %}
+</ul>
+{% endif %}
+{% endblock content %}

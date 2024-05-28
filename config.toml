@@ -8,6 +8,9 @@ compile_sass = false
 build_search_index = false
 
 output_dir = "docs"
+taxonomies = [
+  {name = "tags", feed = true},
+]
 
 [markdown]
 # Whether to do syntax highlighting
