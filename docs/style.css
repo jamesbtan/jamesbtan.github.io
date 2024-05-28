@@ -36,6 +36,9 @@ summary {
   padding: 0;
   column-count: 2;
 }
+.project-list:has(.project-list__item:only-child) {
+  column-count: 1;
+}
 @media (max-width: 40rem) {
   .project-list {
     column-count: 1;
