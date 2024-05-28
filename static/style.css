@@ -1,3 +1,6 @@
+:root {
+  --card-margin: 1rem;
+}
 body {
   max-width: 40rem;
   margin: 0 auto;
@@ -45,7 +48,7 @@ menu > li {
 .project-list__buttons {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  margin-bottom: 0.25rem;
+  margin-top: 0.25rem;
   border-radius: 0.5rem;
   column-gap: 0.5rem;
 }
@@ -102,6 +105,6 @@ menu > li {
 .project-list__card, .article__header {
   background-color: #eee;
   border: solid 2px black;
-  margin-bottom: 1rem;
+  margin-bottom: var(--card-margin);
   padding: 0.5rem;
 }
