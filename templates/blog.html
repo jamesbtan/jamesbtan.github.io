@@ -1,8 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
 <h1>blog</h1>
-<button onclick="collapseAll()">Collapse all</button>
-<button onclick="expandAll()">Expand all</button>
+<menu>
+  <button onclick="collapseAll()">Collapse all</button>
+  <button onclick="expandAll()">Expand all</button>
+</menu>
 {% set months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"] %}
 {% set first = true %}
 {% for year, pages in section.pages | group_by(attribute="year") %}
