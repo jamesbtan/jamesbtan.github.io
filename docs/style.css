@@ -44,6 +44,8 @@ menu > li {
 .project-list__card {
   list-style-type: none;
   break-inside: avoid;
+  page-break-inside: avoid;
+  -webkit-column-break-inside: avoid;
 }
 .project-list__buttons {
   display: grid;
