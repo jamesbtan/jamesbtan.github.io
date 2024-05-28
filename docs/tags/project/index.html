@@ -29,11 +29,10 @@
   
 
 <h1>projects</h1>
-<button onclick="toggle()">toggle</button>
 <ul class="project-list">
 
-  <li class="project-list__card">
-    <article>
+  <li class="project-list__item">
+    <article class="project-list__card">
       <h1 class="project-list__title">Long project</h1>
       
       
@@ -52,8 +51,8 @@
     </article>
   </li>
 
-  <li class="project-list__card">
-    <article>
+  <li class="project-list__item">
+    <article class="project-list__card">
       <h1 class="project-list__title">Medium project</h1>
       
       
@@ -72,8 +71,8 @@
     </article>
   </li>
 
-  <li class="project-list__card">
-    <article>
+  <li class="project-list__item">
+    <article class="project-list__card">
       <h1 class="project-list__title">Less Long project</h1>
       
       
@@ -92,8 +91,8 @@
     </article>
   </li>
 
-  <li class="project-list__card">
-    <article>
+  <li class="project-list__item">
+    <article class="project-list__card">
       <h1 class="project-list__title">Other Project</h1>
       
       
@@ -111,8 +110,8 @@
     </article>
   </li>
 
-  <li class="project-list__card">
-    <article>
+  <li class="project-list__item">
+    <article class="project-list__card">
       <h1 class="project-list__title">Sample Project</h1>
       
       
@@ -131,13 +130,6 @@
   </li>
 
 </ul>
-<script>
-  const root = document.querySelector(':root').style;
-  function toggle() {
-    const c = root.getPropertyValue('--card-margin');
-    root.setProperty('--card-margin', c == '0' ? '1rem' : '0');
-  }
-</script>
 
 
 </body>

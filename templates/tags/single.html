@@ -7,11 +7,10 @@
 {% block content %}
 {% if term.name == "project" %}
 <h1>projects</h1>
-<button onclick="toggle()">toggle</button>
 <ul class="project-list">
 {% for page in term.pages %}
-  <li class="project-list__card">
-    <article>
+  <li class="project-list__item">
+    <article class="project-list__card">
       <h1 class="project-list__title">{{ page.title }}</h1>
       {% set e = page.extra %}
       {% if e.desc %}
@@ -34,13 +33,6 @@
   </li>
 {% endfor %}
 </ul>
-<script>
-  const root = document.querySelector(':root').style;
-  function toggle() {
-    const c = root.getPropertyValue('--card-margin');
-    root.setProperty('--card-margin', c == '0' ? '1rem' : '0');
-  }
-</script>
 {% else %}
 <h1>
   {{ taxonomy.name }} |
