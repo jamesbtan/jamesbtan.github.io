@@ -57,5 +57,22 @@
     <li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
   {% endfor %}
 </ul>
+{% set subtags = [] %}
+{% set taxonomy = get_taxonomy(kind="tags") %}
+{% for tag in taxonomy.items %}
+  {% if tag.name is starting_with(term.name ~ "/") %}
+    {% set_global subtags = subtags | concat(with=tag) %}
+  {% endif %}
+{% endfor %}
+{% if subtags %}
+<details>
+<summary>subtags</summary>
+<ul>
+{% for tag in subtags %}
+  <li><a href="{{ tag.permalink | safe }}">{{ tag.name }}</a></li>
+{% endfor %}
+</ul>
+</details>
+{% endif %}
 {% endif %}
 {% endblock content %}

@@ -10,6 +10,10 @@ menu > li {
   list-style-type: none;
   display: inline-block;
 }
+summary {
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
 
 .main-nav {
   font-size: 1.25rem;
