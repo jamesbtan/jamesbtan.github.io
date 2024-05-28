@@ -3,6 +3,10 @@ body {
   margin: 0 auto;
   padding: 1rem;
 }
+menu {
+  padding: 0;
+}
+
 .main-nav {
   /*margin: 0 auto;*/
   font-size: 1.25rem;
