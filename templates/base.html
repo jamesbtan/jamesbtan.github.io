@@ -22,6 +22,22 @@
       </ul>
     </nav>
   </header>
-  {% block content %} {% endblock %}
+  <main>
+    {% block content %} {% endblock %}
+  </main>
+  <footer>
+    <div class="acct-card">
+      <ul class="acct-card__list">
+        {% set section = get_section(path="_index.md") %}
+        {% for contact in section.extra.contacts %}
+          <li class="acct-card__item">
+            <img class="acct-card__img" alt="{{ contact.name }}" src="{{ contact.icon }}" />
+            <div><a class="acct-card__link" href="{{ contact.url }}">{{ contact.user }}</a></div>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </footer>
+  {% block script %} {% endblock %}
 </body>
 </html>

@@ -1,5 +1,8 @@
 body {
   max-width: 40rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
   padding: 1rem;
 }
@@ -13,6 +16,12 @@ menu > li {
 summary {
   font-weight: bold;
   margin-top: 0.5rem;
+}
+footer {
+  margin-top: 2rem;
+}
+main {
+  flex: 1;
 }
 
 .main-nav {
@@ -109,8 +118,29 @@ summary {
 .article__tag:has(a:hover), .project-list__button:hover {
   opacity: 0.75;
 }
-.project-list__card, .article__header {
+.project-list__card, .acct-card, .article__header {
   background-color: #eee;
   border: solid 2px black;
   padding: 0.5rem;
+}
+
+.acct-card {
+  border: solid 1px black;
+}
+.acct-card__list {
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1.5rem 1fr;
+  column-gap: 0.25rem;
+}
+.acct-card__item {
+  list-style-type: none;
+  display: contents;
+}
+.acct-card__img {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  vertical-align: middle;
 }

@@ -21,6 +21,8 @@
     {% set_global first = false %}
   {% endfor %}
 {% endfor %}
+{% endblock content %}
+{% block script %}
 <script>
   function collapseAll() {
     for (let x of document.getElementsByTagName('details')) {
@@ -33,4 +35,4 @@
     }
   }
 </script>
-{% endblock content %}
+{% endblock script %}
