@@ -96,9 +96,11 @@ main {
 .article__tags {
   list-style-type: none;
   padding: 0;
+  display: flex;
+  gap: 0.5em;
+  flex-wrap: wrap;
 }
 .article__tag {
-  display: inline-block;
   font-size: 0.8rem;
 }
 .article__tag-link {

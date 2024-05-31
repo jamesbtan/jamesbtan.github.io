@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title> - source&#x2F;obsidian</title>
+    <link rel="self" type="application/atom+xml" href="https://jamesbtan.github.io/tags/source-obsidian/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://jamesbtan.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-05-31T00:00:00+00:00</updated>
+    <id>https://jamesbtan.github.io/tags/source-obsidian/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Test2</title>
+        <published>2024-05-31T00:00:00+00:00</published>
+        <updated>2024-05-31T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://jamesbtan.github.io/blog/obs-devblog-test2/"/>
+        <id>https://jamesbtan.github.io/blog/obs-devblog-test2/</id>
+        
+        <content type="html" xml:base="https://jamesbtan.github.io/blog/obs-devblog-test2/">&lt;p&gt;This is should auto upload to the blog&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Test</title>
+        <published>2024-05-31T00:00:00+00:00</published>
+        <updated>2024-05-31T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://jamesbtan.github.io/blog/obs-test/"/>
+        <id>https://jamesbtan.github.io/blog/obs-test/</id>
+        
+        <content type="html" xml:base="https://jamesbtan.github.io/blog/obs-test/">&lt;p&gt;Test&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

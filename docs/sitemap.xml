@@ -19,8 +19,12 @@
         <lastmod>2024-05-27</lastmod>
     </url>
     <url>
-        <loc>https://jamesbtan.github.io/blog/new/</loc>
-        <lastmod>2024-06-27</lastmod>
+        <loc>https://jamesbtan.github.io/blog/obs-devblog-test2/</loc>
+        <lastmod>2024-05-31</lastmod>
+    </url>
+    <url>
+        <loc>https://jamesbtan.github.io/blog/obs-test/</loc>
+        <lastmod>2024-05-31</lastmod>
     </url>
     <url>
         <loc>https://jamesbtan.github.io/blog/old/</loc>
@@ -62,6 +66,9 @@
         <loc>https://jamesbtan.github.io/tags/</loc>
     </url>
     <url>
+        <loc>https://jamesbtan.github.io/tags/another-test/</loc>
+    </url>
+    <url>
         <loc>https://jamesbtan.github.io/tags/project-less-long/</loc>
     </url>
     <url>
@@ -78,6 +85,9 @@
     </url>
     <url>
         <loc>https://jamesbtan.github.io/tags/project/</loc>
+    </url>
+    <url>
+        <loc>https://jamesbtan.github.io/tags/source-obsidian/</loc>
     </url>
     <url>
         <loc>https://jamesbtan.github.io/tags/test-nest-1/</loc>
