@@ -23,6 +23,9 @@ footer {
 main {
   flex: 1;
 }
+p {
+  margin-bottom: 1em;
+}
 
 .main-nav {
   font-size: 1.25rem;

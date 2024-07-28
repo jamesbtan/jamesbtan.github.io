@@ -1,9 +1,11 @@
 {% extends "base.html" %}
+{% block title %}
+  - {{ page.title }}
+{% endblock title %}
 {% block content %}
-<h1>blog</h1>
+<h1>{{ page.title }}</h1>
 <article class="article">
   <div class="article__header">
-    <h1>{{ page.title }}</h1>
     {{ page.date }}
     {% if page.updated %}
       (<i>Updated: {{ page.updated }}</i>)

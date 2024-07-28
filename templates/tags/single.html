@@ -12,10 +12,8 @@
   <li class="project-list__item">
     <article class="project-list__card">
       <h1 class="project-list__title">{{ page.title }}</h1>
+      {{ page.summary | safe }}
       {% set e = page.extra %}
-      {% if e.desc %}
-        <p>{{ e.desc }}</p>
-      {% endif %}
       <div class="project-list__buttons">
         <a class="project-list__button project-list__button--tag" href="{{ page.permalink | safe }}">Blog</a>
         {% if e.demo %}
